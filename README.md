@@ -1,0 +1,1 @@
+# https-github.com-Temurbek-01-ONE-GLOBUS-TRANSLATION
