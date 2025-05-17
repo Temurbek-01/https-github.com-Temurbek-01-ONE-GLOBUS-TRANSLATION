@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="icon" href="free.icon.ico"
+    <meta charset="UTF-8" />
+    <title>ONE GLOBUS TRANSLATION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #ff4e50, #1e90ff);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px 40px;
+        }
+
+        header {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            color: #fff;
+            user-select: none;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .button-container {
+            text-align: center;
+            padding: 30px 0 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            transition: transform 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 25px 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            color: #fff;
+        }
+
+        form label {
+            font-weight: 600;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        form input,
+        form textarea {
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        form input {
+            height: 40px;
+        }
+
+        form textarea {
+            min-height: 80px;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: 2px solid #ff4e50;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        #reviews {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+        #reviews h3 {
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .review {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .review strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 18px;
+            color: #ff4e50;
+        }
+
+        .review p {
+            font-size: 16px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Мой сайт</div>
+        <div class="menu">
+            <a href="#home">Главная</a>
+            <a href="#about">О сайте</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#feedback">Отзывы</a>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="button-container">
+    <button onclick="sayHello()">Нажми меня</button>
+</section>
+
+<section id="about" class="card">
+    <img src="https://i.postimg.cc/v89GmNpf/photo-2025-05-17-20-16-09.jpg" alt="Фото о сайте" />
+    <h2>О сайте</h2>
+    <h1>
+        Услуги:
+        * официальный перевод документов
+        * апостиль документов
+        * легализация документов
+    </h1>
+</section>
+
+<section id="contacts" class="card">
+    <h2>Контакты</h2>
+    <p>Почта: kobilova.gulnoza82@mail.ru </p>
+    <p>Телефон: +998-97-165-65-00 </p>
+    <p>Адрес: Город Андижан
+        Улица Ташкентская 
+        Ориентир: кафе Бананза и кафе Рубои </p>
+</section>
+
+<section id="feedback" class="card">
+    <h2>Оставьте отзыв</h2>
+    <form id="feedbackForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required placeholder="Ваше имя" />
+
+        <label for="comment">Отзыв:</label>
+        <textarea id="comment" name="comment" required placeholder="Ваш отзыв"></textarea>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <div id="reviews">
+        <h3>Отзывы наших посетителей:</h3>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025  Все права защищены.
+</footer>
+
+<script>
+    function sayHello() {
+        alert("Здраствуйте добро пожаловать на наш сайт");
+    }
+
+    const form = document.getElementById('feedbackForm');
+    const reviewsContainer = document.getElementById('reviews');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = form.name.value.trim();
+        const comment = form.comment.value.trim();
+
+        if (!name || !comment) {
+            alert('Пожалуйста, заполните все поля.');
+            return;
+        }
+
+    
+        const reviewDiv = document.createElement('div');
+        reviewDiv.classList.add('review');
+
+        const nameElem = document.createElement('strong');
+        nameElem.textContent = name;
+
+        const commentElem = document.createElement('p');
+        commentElem.textContent = comment;
+
+        reviewDiv.appendChild(nameElem);
+        reviewDiv.appendChild(commentElem);
+
+        reviewsContainer.appendChild(reviewDiv);
+        form.reset();
+    });
+</script>
+</body>
+</html>
